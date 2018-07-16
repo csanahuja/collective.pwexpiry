@@ -13,20 +13,19 @@ from collective.pwexpiry.interfaces import IExpirationCheck
 from collective.pwexpiry.utils import days_since_event
 from plone import api
 from plone.registry.interfaces import IRegistry
-from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 from Testing.makerequest import makerequest
 from zope.component import getAdapters, getUtility
 from zope.component.hooks import setSite
 from zope.globalrequest import setRequest
 
 
-def notify_and_expire():
+def notify_and_expire(site):
     """
     For each registered user check all the conditions and execute
     the notification action
     """
     logger = logging.getLogger('collective.pwexpiry')
-    logger.info('*' * 8 + 'Executing notify_an_expire script' + '*' * 8)
+    logger.info('*' * 8 + 'Executing notify_an_expire script on site: ' + site.id + '*' * 8)
 
     portal = api.portal.get()
     registry = getUtility(IRegistry)
@@ -46,11 +45,15 @@ def notify_and_expire():
 
     whitelisted = registry.get('collective.pwexpiry.whitelisted_users')
     for user_id in portal.acl_users.source_users.getUserIds():
+
+        logger.info('*' * 8 + 'Checking user: ' + user_id + '*' * 8)
+
         # Ignore whitelisted
         if whitelisted and user_id in whitelisted:
             continue
 
         user = portal.portal_membership.getMemberById(user_id)
+
         password_date = DateTime(user.getProperty(
             'password_date', '2000/01/01'
         ))
@@ -80,12 +83,15 @@ def notify_and_expire():
         # Search for registered notifications and execute them
         notifications = getAdapters((portal,), IExpirationCheck)
         for notification_name, notification in notifications:
+            logger.info('*' * 8 + 'Executing notification: ' + notification_name + '*' * 8)
+
             if notifications_to_use and \
                     notification_name not in notifications_to_use:
                 msg = ("Skipping notification %s because it is not in "
                        "registry['collective.pwexpiry.notification_actions']")
                 logger.debug(msg % notification_name)
                 continue
+
             if notification(days_to_expire):
                 try:
                     # Protection of sending the
@@ -167,7 +173,7 @@ def entrypoint(app, args):
         site.REQUEST['SERVER_URL'] = os.getenv('SERVER_URL')
 
     setRequest(site.REQUEST)
-    notify_and_expire()
+    notify_and_expire(site)
     # commit transaction
     transaction.commit()
     app._p_jar.sync()
