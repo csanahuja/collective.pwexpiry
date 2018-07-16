@@ -16,35 +16,35 @@ msgstr ""
 
 #: ../upgrades/configure.zcml:15
 msgid "Add a browserlayer"
-msgstr ""
+msgstr "Añade una browserlayer"
 
 #: ../configure.zcml:29
 msgid "Adds the feature of password expiration control."
-msgstr ""
+msgstr "Añade la funcionalitat del control de la expiración de la contraseña"
 
 #: ../upgrades/configure.zcml:57
 msgid "Include the new whitelisted_users in the registry"
-msgstr ""
+msgstr "Incluir los nuevos usuarios de la lista blanca en el registro"
 
 #: ../browser/preferences/pwexpirycontrolpanel.py:135
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: ../browser/preferences/pwexpirycontrolpanel.py:131
 msgid "No users were unlocked"
-msgstr ""
+msgstr "No hay usuarios bloqueados"
 
 #: ../profiles/default/controlpanel.xml
 msgid "Password expiration"
-msgstr ""
+msgstr "Expiración de la contraseña"
 
 #: ../password_validator.py:41
 msgid "Passwords must be at least 8 characters in length."
-msgstr ""
+msgstr "Mínimo 8 carácteres"
 
 #: ../password_validator.py:98
 msgid "Passwords must contain at least three of the following four character groups: Uppercase characters (A through Z), Lowercase characters (a through z), Numerals (0 through 9), Special characters such as !, $, #, %"
-msgstr ""
+msgstr "Ha de contener tres de las 4 características: Mayúsculas (A-Z), minúsculas (a-z), números (0-9), carácteres especials como !, $, #, %"
 
 #: ../configure.zcml:37
 msgid "Profile intended only in Plone 4 (No need to manually run it, default install profile should do it)."
@@ -52,36 +52,39 @@ msgstr ""
 
 #: ../upgrades/configure.zcml:36
 msgid "Show status message 'your account has expired' in login popup."
-msgstr ""
+msgstr "Mostrar el mensaje de estado 'su cuenta ha expirado' en pop-up del login"
 
 #: ../browser/preferences/pwexpirycontrolpanel.py:127
 msgid "The following users were unlocked: %s, "
-msgstr ""
+msgstr "Los siguientes usuarios han sido desbloqueados: %s"
 
 #: ../browser/preferences/pwexpirycontrolpanel.pt:38
 msgid "User's password expiration panel"
-msgstr ""
+msgstr "Panel de expiración de la contraseña del usuario"
 
 #: ../password_validator.py:80
 msgid "You have to change your password."
-msgstr ""
+msgstr "Ha de cambiar su contraseña"
 
 #: ../pwdisable_plugin.py:58
 msgid "Your account has been locked due to too many invalid attempts to login with a wrong password. Your account will remain blocked for the next ${hrs} hours. You can reset your password, or contact an administrator to unlock it, using the Contact form."
-msgstr ""
+msgstr "Su cuenta ha sido bloqueada debido a demasiados intentos de login con una contraseña incorrecta. Su cuenta permanecerá bloqueada las siguientes ${hrs} horas. Puede reinciar su contraseña, o contactar un administrador para su desbloqueo."
 
 #: ../password_validator.py:72
 msgid "Your password cannot contain your account name(Username), first name or last name."
-msgstr ""
+msgstr "La contraseña no puede contener el nombre de usuario ni el nombre completo"
 
 #: ../pwexpiry_plugin.py:108
 msgid "Your password has expired."
-msgstr ""
+msgstr "La contraseña ha expirado"
 
 #. Default: "\n\nIn order to change your password, please visit ${server_url}/@@change-password"
 #: ../browser/emails/emails.py:63
 msgid "change_password_email_text"
 msgstr ""
+""
+""
+"Para proceder a cambiar su contrasenya, por favor visite ${server_url}/@@change-password"
 
 #: ../configure.zcml:29
 msgid "collective.pwexpiry"
@@ -94,54 +97,70 @@ msgstr ""
 #. Default: "Show all search results"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:157
 msgid "description_pas_show_all_search_results"
-msgstr ""
+msgstr "Mostrar todos los resultados de la búsqueda"
 
 #. Default: "View and manage user's password expiration properties"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:50
 msgid "description_password_expiration"
-msgstr ""
+msgstr "Ver y administrar las propietades de la expiración de las contraseñas"
 
 #. Default: "${days} days left to password expiration"
 #: ../utils.py:34
 msgid "email_subject"
-msgstr ""
+msgstr "${days} días restantes hasta que su contraseña expire"
 
 #. Default: "Hello ${fullname},\n\nThere are ${days} days left before your password expires!\n\nPlease ensure to reset your password before it's expired."
 #: ../browser/emails/emails.py:51
 msgid "email_text"
 msgstr ""
+"Estimado ${fullname},\n"
+"\n"
+"Quedan ${days} días antes de que su contraseña expire!\n"
+"\n"
+"Por favor cambiela antes de la fecha de expiración."
 
 #. Default: "Hello ${fullname},\n\nYour password has expired.\n\nPlease ensure to reset your password before it's expired."
 #: ../browser/emails/emails.py:71
 msgid "email_text_expired"
 msgstr ""
+"Estimado ${fullname},\n"
+"\n"
+"Su contraseça ha expirado.\n"
+"\n"
+"Por favor cambiela."
 
 #. Default: "This password has been used already."
 #: ../password_history_validator.py:51
 msgid "info_reused_pw"
-msgstr ""
+msgstr "Esta contraseña ya se ha usado con anterioridad"
 
 #. Default: "Apply Changes"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:169
 msgid "label_apply_changes"
-msgstr ""
+msgstr "Aplicar cambios"
 
 #. Default: "Save whitelist"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:194
 msgid "label_save_whitelist"
-msgstr ""
+msgstr "Guardar lista blanca"
 
 #. Default: "Users whitelisted"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:189
 msgid "label_whitelist_users"
-msgstr ""
+msgstr "Usuarios de la lista blanca"
 
 #. Default: "\n\nIn order to reset your password, please visit ${server_url}/mail_password_form?userid=${username}"
 #: ../browser/emails/emails.py:83
 msgid "reset_password_email_text"
 msgstr ""
+""
+""
+"Para proceder a cambiar su contraseña, por favor visite ${server_url}/mail_password_form?userid=${username}"
 
 #. Default: "\n\nThis email was sent from ${server_name}"
 #: ../browser/emails/emails.py:92
 msgid "server_name_email_text"
 msgstr ""
+""
+""
+"Este correu se ha enviado desde ${server_name}"

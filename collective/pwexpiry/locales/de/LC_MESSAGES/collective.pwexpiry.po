@@ -106,7 +106,9 @@ msgstr "Ihr Passwort ist abgelaufen."
 #: ../browser/emails/emails.py:63
 msgid "change_password_email_text"
 msgstr ""
-"\n\nUm Ihr Passwort zu ändern rufen Sie bitte ${server_url}/@@change-password"
+""
+""
+"Um Ihr Passwort zu ändern rufen Sie bitte ${server_url}/@@change-password"
 " auf."
 
 #: ../configure.zcml:29
@@ -138,9 +140,9 @@ msgstr "Ihr Passwort läuft in ${days} Tagen ab"
 msgid "email_text"
 msgstr ""
 "Hallo ${username},\n"
-"\n"
+""
 "Ihr Passwort läuft in ${days} Tagen ab.\n"
-"\n"
+""
 "Bitte ändern Sie Ihr Passwort bevor es abläuft!"
 
 #. Default: "Hello ${fullname},\n\nYour password has expired.\n\nPlease ensure to reset your password before it's expired."
@@ -178,11 +180,16 @@ msgstr "Benutzer ohne Passwortablauf"
 #: ../browser/emails/emails.py:83
 msgid "reset_password_email_text"
 msgstr ""
-"\n\nUm Ihr Passwort zurückzusetzen, rufen Sie bitte"
+""
+""
+"Um Ihr Passwort zurückzusetzen, rufen Sie bitte"
 " ${server_url}/mail_password_form?userid=${username} auf"
 
 #. Default: "\n\nThis email was sent from ${server_name}"
 #: ../browser/emails/emails.py:92
 msgid "server_name_email_text"
-msgstr "\n\nDiese Email wurde von ${server_name} versendet."
+msgstr ""
+""
+""
+"Diese Email wurde von ${server_name} versendet."
 

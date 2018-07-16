@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-07-16 10:02+0000\n"
+"POT-Creation-Date: 2018-07-16 09:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,35 +16,35 @@ msgstr ""
 
 #: ../upgrades/configure.zcml:15
 msgid "Add a browserlayer"
-msgstr ""
+msgstr "Afegeix una browserlayer"
 
 #: ../configure.zcml:29
 msgid "Adds the feature of password expiration control."
-msgstr ""
+msgstr "Afegeix la funcionalitat del control de l'expiració de la contrasenya"
 
 #: ../upgrades/configure.zcml:57
 msgid "Include the new whitelisted_users in the registry"
-msgstr ""
+msgstr "Incloure els nous usuaris de la llista blanca al registre"
 
 #: ../browser/preferences/pwexpirycontrolpanel.py:135
 msgid "Never"
-msgstr ""
+msgstr "Mai"
 
 #: ../browser/preferences/pwexpirycontrolpanel.py:131
 msgid "No users were unlocked"
-msgstr ""
+msgstr "Cap usuari bloquejat"
 
 #: ../profiles/default/controlpanel.xml
 msgid "Password expiration"
-msgstr ""
+msgstr "Expiració de la contrasenya"
 
 #: ../password_validator.py:41
 msgid "Passwords must be at least 8 characters in length."
-msgstr ""
+msgstr "Mínim 8 caràcters"
 
 #: ../password_validator.py:98
 msgid "Passwords must contain at least three of the following four character groups: Uppercase characters (A through Z), Lowercase characters (a through z), Numerals (0 through 9), Special characters such as !, $, #, %"
-msgstr ""
+msgstr "Ha de contenir tres de les 4 característiques: Majúscules (A-Z), minúscules (a-z), nombres (0-9), caràcters especials com !, $, #, %"
 
 #: ../configure.zcml:37
 msgid "Profile intended only in Plone 4 (No need to manually run it, default install profile should do it)."
@@ -52,36 +52,39 @@ msgstr ""
 
 #: ../upgrades/configure.zcml:36
 msgid "Show status message 'your account has expired' in login popup."
-msgstr ""
+msgstr "Mostrar el missatge d'estat 'el seu compte ha expirat' al pop-up del login"
 
 #: ../browser/preferences/pwexpirycontrolpanel.py:127
 msgid "The following users were unlocked: %s, "
-msgstr ""
+msgstr "Els següents usuaris han estat desbloquejats: %s"
 
 #: ../browser/preferences/pwexpirycontrolpanel.pt:38
 msgid "User's password expiration panel"
-msgstr ""
+msgstr "Panell d'expiració de la contrasenya de l'usuari"
 
 #: ../password_validator.py:80
 msgid "You have to change your password."
-msgstr ""
+msgstr "Ha de canviar la seva contrasenya"
 
 #: ../pwdisable_plugin.py:58
 msgid "Your account has been locked due to too many invalid attempts to login with a wrong password. Your account will remain blocked for the next ${hrs} hours. You can reset your password, or contact an administrator to unlock it, using the Contact form."
-msgstr ""
+msgstr "El vostre compte ha estat bloquejat degut a massa intents de login amb una contrasenya incorrecta. El vostre compte romandrà bloquejat les properes ${hrs} hores. Podeu reiniciar la contrasenya, o contactar un administrador per desbloquejar-lo."
 
 #: ../password_validator.py:72
 msgid "Your password cannot contain your account name(Username), first name or last name."
-msgstr ""
+msgstr "La contrasenya no pot contenir el nom d'usuari, o el nom complet"
 
 #: ../pwexpiry_plugin.py:108
 msgid "Your password has expired."
-msgstr ""
+msgstr "La contrasenya ha expirat"
 
 #. Default: "\n\nIn order to change your password, please visit ${server_url}/@@change-password"
 #: ../browser/emails/emails.py:63
 msgid "change_password_email_text"
 msgstr ""
+""
+""
+"Per tal de canviar la contrasenya, si us plau visiteu ${server_url}/@@change-password"
 
 #: ../configure.zcml:29
 msgid "collective.pwexpiry"
@@ -94,54 +97,58 @@ msgstr ""
 #. Default: "Show all search results"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:157
 msgid "description_pas_show_all_search_results"
-msgstr ""
+msgstr "Mostrar tots els resultats de la cerca"
 
 #. Default: "View and manage user's password expiration properties"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:50
 msgid "description_password_expiration"
-msgstr ""
+msgstr "Veure i administrar les propietats de l'expiració de les contrasenyes"
 
 #. Default: "${days} days left to password expiration"
 #: ../utils.py:34
 msgid "email_subject"
-msgstr ""
+msgstr "${days} dies restants fins que la vostra contrasenya expiri"
 
 #. Default: "Hello ${fullname},\n\nThere are ${days} days left before your password expires!\n\nPlease ensure to reset your password before it's expired."
 #: ../browser/emails/emails.py:51
 msgid "email_text"
-msgstr ""
+msgstr "Benvolgut ${fullname},\n\nResten ${days} dies abans que la vostra contrasenya expiri!\n\nSi us plau canvieu-la abans de la data d'expiració."
 
 #. Default: "Hello ${fullname},\n\nYour password has expired.\n\nPlease ensure to reset your password before it's expired."
 #: ../browser/emails/emails.py:71
 msgid "email_text_expired"
-msgstr ""
+msgstr "Benvolgut ${fullname},\n\nLa seva contrasenya ha expirat.\n\nSi us plau canvieu-la."
 
 #. Default: "This password has been used already."
 #: ../password_history_validator.py:51
 msgid "info_reused_pw"
-msgstr ""
+msgstr "Aquesta contrasenya ja s'ha utilitzat prèviament"
 
 #. Default: "Apply Changes"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:169
 msgid "label_apply_changes"
-msgstr ""
+msgstr "Aplicar canvis"
 
 #. Default: "Save whitelist"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:194
 msgid "label_save_whitelist"
-msgstr ""
+msgstr "Guardar llista blanca"
 
 #. Default: "Users whitelisted"
 #: ../browser/preferences/pwexpirycontrolpanel.pt:189
 msgid "label_whitelist_users"
-msgstr ""
+msgstr "Usuaris de la llista blanca"
 
 #. Default: "\n\nIn order to reset your password, please visit ${server_url}/mail_password_form?userid=${username}"
 #: ../browser/emails/emails.py:83
 msgid "reset_password_email_text"
 msgstr ""
+""
+"Per tal de canviar la seva contrasenya, si us plau visiteu ${server_url}/mail_password_form?userid=${username}"
 
 #. Default: "\n\nThis email was sent from ${server_name}"
 #: ../browser/emails/emails.py:92
 msgid "server_name_email_text"
 msgstr ""
+""
+"Aquest correu ha estat enviat des de ${server_name}"

@@ -18,7 +18,7 @@ CURRENT_PATH=`pwd`
 CATALOGNAME="collective.pwexpiry"
 
 # List of languages
-LANGUAGES="en it de"
+LANGUAGES="en it de ca es"
 
 # Create locales folder structure for languages
 ROOT_DIR=..
