@@ -26,9 +26,14 @@ def extended_testPasswordValidity(self, password, confirm=None, data=None):
     Patching the standard Plone's testPasswordValidity method to
     enable registering a custom password validator.
     """
+
+
     validators = getAdapters((self,), ICustomPasswordValidator)
+    print validators
     for name, validator in validators:
+        print name, validator
         result = validator.validate(password, data)
+        print result
         if result:
             return result
 

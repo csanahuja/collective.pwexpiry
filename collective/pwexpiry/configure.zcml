@@ -56,8 +56,15 @@
       />
 
   <adapter
-      name="your_package_password_history"
+      name="password_history_validator"
       factory="collective.pwexpiry.password_history_validator.PasswordHistoryValidator"
+      provides="collective.pwexpiry.interfaces.ICustomPasswordValidator"
+      for="zope.interface.Interface"
+      />
+
+  <adapter
+      name="password_validator"
+      factory="collective.pwexpiry.password_validator.PasswordValidator"
       provides="collective.pwexpiry.interfaces.ICustomPasswordValidator"
       for="zope.interface.Interface"
       />
