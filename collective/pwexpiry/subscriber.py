@@ -4,6 +4,7 @@ from plone import api
 from plone.registry.interfaces import IRegistry
 from zope.component import queryUtility
 
+
 def check_account(user, registry):
 
     # Now check if this user had his account locked
