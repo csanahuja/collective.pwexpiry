@@ -55,7 +55,6 @@ class PwExpiryPlugin(BasePlugin):
     def authenticateCredentials(self, credentials):
         """
         Check if the user.password_date is older than validity_period.
-        If validity_period is 0, skip the check
         """
         login = credentials.get('login')
         if not login:
@@ -67,6 +66,8 @@ class PwExpiryPlugin(BasePlugin):
             return None
 
         registry = getUtility(IRegistry)
+
+        # Checks if validity is enabled, 0 disabled
         validity_period = registry['collective.pwexpiry.validity_period']
         if validity_period == 0:
             return None
@@ -76,10 +77,8 @@ class PwExpiryPlugin(BasePlugin):
             return None
 
         # Ignore whitelisted
-        whitelisted = api.portal.get_registry_record(
-            'collective.pwexpiry.whitelisted_users'
-        )
-        if user.getId() in whitelisted:
+        whitelisted = registry.get('collective.pwexpiry.whitelisted_users')
+        if whitelisted and user.getId() in whitelisted:
             return None
 
         password_date = user.getProperty('password_date', '2000/01/01')
@@ -91,6 +90,9 @@ class PwExpiryPlugin(BasePlugin):
             if validity_period - since_last_pw_reset < 0:
                 self.REQUEST.RESPONSE.setHeader('user_expired', user.getId())
                 raise Unauthorized
+        # If not password_date set, set current
+        else:
+            user.setMemberProperties({'password_date': current_time})
         return None
 
     # IChallengePlugin implementation
